@@ -122,7 +122,7 @@ def init_config():
     conf_dict = {k: v for k, v in conf_dict.items() if k.isupper()}
 
     conf_dict.setdefault("PORT", 3256)
-    conf_dict.setdefault("USERS", {"tg":  "00000000000000000000000000000000"})
+    conf_dict.setdefault("USERS", {"tg":  "tg52jo9u1bcmfn8nrpzh9kxqseu5tabc"})
     conf_dict["AD_TAG"] = bytes.fromhex(conf_dict.get("AD_TAG", ""))
 
     for user, secret in conf_dict["USERS"].items():
@@ -2169,7 +2169,7 @@ def print_tg_info():
                 proxy_links.append({"user": user, "link": tls_link})
                 print("{}: {}".format(user, tls_link), flush=True)
 
-        if secret in ["00000000000000000000000000000000", "0123456789abcdef0123456789abcdef",
+        if secret in ["tg52jo9u1bcmfn8nrpzh9kxqseu5tabc", "0123456789abcdef0123456789abcdef",
                       "tg52jo9u1bcmfn8nrpzh9kxqseu5tabc"]:
             msg = "The default secret {} is used, this is not recommended".format(secret)
             print(msg, flush=True)
