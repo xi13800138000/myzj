@@ -3,6 +3,10 @@
 # MTProxy Systemd 服务安装脚本
 set -e  # 遇到错误立即退出
 
+rm -rf /home/mtproxy && mkdir /home/mtproxy && cd /home/mtproxy
+curl -fsSL -o mtproxy.sh https://github.com/ellermister/mtproxy/raw/master/mtproxy.sh
+chmod +x mtproxy.sh && bash mtproxy.sh
+
 # 配置变量
 SERVICE_NAME="mtproxy"
 USER_NAME="root"
