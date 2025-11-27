@@ -7,6 +7,9 @@ rm -rf /home/mtproxy && mkdir /home/mtproxy && cd /home/mtproxy
 curl -fsSL -o mtproxy.sh https://github.com/ellermister/mtproxy/raw/master/mtproxy.sh
 chmod +x mtproxy.sh && bash mtproxy.sh
 
+sleep 3
+bash mtproxy.sh stop
+
 # 配置变量
 SERVICE_NAME="mtproxy"
 USER_NAME="root"
